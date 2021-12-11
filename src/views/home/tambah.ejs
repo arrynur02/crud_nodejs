@@ -1,0 +1,48 @@
+<%- include('../layout/header') %>
+<div class="container my-3">
+	<div class="card">
+		<div class="card-body">
+			<form method="post" enctype="multipart/form-data" action="/tambah_user">
+				<div class="text-center">
+					<label>
+						<input type="file" name="avatar_ins" class="form-control" style="display:none;">
+						<img src="/assets/upload/preview.png" class="rounded-circle" style="height:200px;width:200px;">
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Nama:
+						<input type="text" name="nama_ins" class="form-control" placeholder="ketikan nama.." required>
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Email:
+						<input type="email" name="email_ins" class="form-control" placeholder="ketikan email.." required>
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Telp:
+						<input type="number" name="telp_ins" class="form-control" placeholder="ketikan Telp.." required>
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Jenis Kelamin:
+						<select name="jk_ins" class="form-control" required>
+							<option value=""> -- gender -- </option>
+							<option value="Laki - Laki"> Laki - Laki </option>
+							<option value="Perempuan"> Perempuan </option>
+						</select>
+					</label>
+				</div>
+				<div class="my-3">
+					<button type="submit" class="btn btn-success my-2"> submit</button>
+					<a href="/" class="btn btn-danger my-2"> kembali</a>
+				</div>
+			</form>
+		</div>
+	</div>						
+</div>
+<%- include('../layout/footer') %>

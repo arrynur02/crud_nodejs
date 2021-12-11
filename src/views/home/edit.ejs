@@ -1,0 +1,53 @@
+<%- include('../layout/header') %>
+<div class="container my-3">
+	<div class="card">
+		<div class="card-body">
+			<form method="post" enctype="multipart/form-data" action="/<%= user[0].user_id %>/edit_user">
+				<div class="text-center">
+					<label>
+						<input type="hidden" name="avatarlama_edit" value="<%= user[0].avatar %>">
+						<input type="file" name="avatar_edit" class="form-control" style="display:none;">
+						<% if(user[0].avatar == '' || user[0].avatar == null){ %>
+							<img src="/assets/upload/preview.png" class="rounded-circle" style="height:200px;width:200px;">
+						<% }else{ %>
+							<img src="/assets/upload/<%= user[0].avatar %>" class="img-fluid rounded-circle" style="height:200px;width:200px;">
+						<% } %>
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Nama:
+						<input type="text" name="nama_edit" class="form-control" placeholder="ketikan nama.." value="<%= user[0].nama %>" required>
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Email:
+						<input type="email" name="email_edit" class="form-control" placeholder="ketikan email.." value="<%= user[0].email %>" required>
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Telp:
+						<input type="number" name="telp_edit" class="form-control" placeholder="ketikan Telp.." value="<%= user[0].telp %>" required>
+					</label>
+				</div>
+				<div class="my-2">
+					<label class="w-100">
+						Jenis Kelamin:
+						<select name="jk_edit" class="form-control" required>
+							<option value=""> -- gender -- </option>
+							<option <% if(user[0].jenis_kel == 'Laki - Laki'){ %>selected<% } %> value="Laki - Laki"> Laki - Laki </option>
+							<option <% if(user[0].jenis_kel == 'Perempuan'){ %>selected<% } %> value="Perempuan"> Perempuan </option>
+						</select>
+					</label>
+				</div>
+				<div class="my-3">
+					<button type="submit" class="btn btn-primary my-2"> update </button>
+					<a href="/" class="btn btn-danger my-2"> kembali</a>
+				</div>
+			</form>
+		</div>
+	</div>						
+</div>
+<%- include('../layout/footer') %>

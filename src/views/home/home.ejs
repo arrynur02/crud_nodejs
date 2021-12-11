@@ -1,0 +1,52 @@
+<%- include('../layout/header') %>
+<div class="container my-3">
+	<div class="text-end">
+		<a href="/tambah" class="btn btn-success"> Tambah data</a>
+	</div>
+	<div class="card my-3 p-2 shadow">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table id="table_user" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Avatar</th>
+							<th>Nama</th>
+							<th>Email</th>
+							<th>Telp</th>
+							<th>Jenis Kelamin</th>
+							<th>Aksi</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% 
+						no=0;
+						for (var i = 0; i < user.length; i++) { 
+							no++
+						%>
+							<tr>
+								<td><%= no %></td>
+								<td>
+									<% if(user[i].avatar == "" || user[i].avatar == null){ %>
+									<img class="rounded-circle" style="height:100px;width:100px;" src="/assets/upload/preview.png" alt="">
+									<% }else{ %>
+									<img class="rounded-circle" style="height:100px;width:100px;" src="/assets/upload/<%= user[i].avatar; %>" alt="">
+									<% } %>
+								</td>
+								<td><%= user[i].nama %></td>
+								<td><%= user[i].email %></td>
+								<td><%= user[i].telp %></td>
+								<td><%= user[i].jenis_kel %></td>
+								<td>
+									<a href="/<%= user[i].user_id %>/edit" userid="<%= user[i].user_id %>" class="btn btn-primary btn-sm"> Edit </a>
+									<a href="javascript:0" userid="<%= user[i].user_id %>" class="btn btn-danger btn-sm btn-hapus-user"> Hapus </a>
+								</td>
+							</tr>
+						<% } %>
+					</tbody>
+				</table>
+			</div>								
+		</div>
+	</div>
+</div>
+<%- include('../layout/footer') %>
