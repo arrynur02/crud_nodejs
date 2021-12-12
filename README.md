@@ -10,3 +10,4 @@ dengan beberapa package nodejs antara lain
 - multer (utk handle multipart/form-data)
 - fs
 
+![Screenshot (948)](https://user-images.githubusercontent.com/56514513/145697729-4b42e232-4550-487e-8b83-08b773826aeb.png)
