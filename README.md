@@ -1,7 +1,5 @@
 # crud_nodejs
-simple crud nodejs!
-web framework ExpressJs
-Bootstrap 5, client datatables, mysql, sweetalert2.
+simple crud nodejs dengan express, bootstrap 5, client datatables, mysql, sweetalert2.
 
 dengan beberapa package nodejs antara lain
 - body-parser
