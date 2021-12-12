@@ -1,7 +1,7 @@
 # crud_nodejs
 simple crud nodejs dengan express, bootstrap 5, client datatables, mysql, sweetalert2.
-
-dengan beberapa package nodejs antara lain
+dengan konsep MVC biar terstruktur.
+dan beberapa package node antara lain
 - body-parser
 - session
 - session flash
